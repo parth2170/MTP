@@ -38,4 +38,4 @@ class GRUCPC(nn.Module):
     
     def embgen(self, x, h):
         out, h = self.gru(x, h)
-        return h
+        return h, h

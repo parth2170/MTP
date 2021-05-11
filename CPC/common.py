@@ -2,8 +2,6 @@ import librosa
 import pickle
 import scipy.io
 import numpy as np
-from srmrpy import srmr 
-import matplotlib.pyplot as plt 
 
 def read_clean(path):
     mat = scipy.io.loadmat(path)
@@ -47,7 +45,7 @@ def get_samples(feature_dict, bit, run):
     else:
         neg_runs = list(range(1, int(total_runs/4))) + list(range(int(total_runs*(4/5)), total_runs))
     
-    npos = 8
+    npos = 4
 
     train_data = {"con":[], "pos":[], "neg":[]}
 
